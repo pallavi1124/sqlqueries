@@ -38,3 +38,32 @@ SELECT person_id, person_name, SUM(data_handled) AS total_data
 FROM trans
 GROUP BY person_id, person_name
 ORDER BY total_data DESC
+
+5. Requiremet Waht are the average and standart deviation of the total time from ABC Table
+
+SELECT AVG(total_time) AS average_time,
+       STDDEV(total_time) AS std_dev_time
+FROM ABC;
+
+6. Requirement is to use the Quartile to give an estimate of how many reclaims are handeld within 15 days
+
+WITH TotalCount AS (
+    SELECT COUNT(*) AS total_count
+    FROM reclaims
+),
+OrderedReclaims AS (
+    SELECT reclaim_handling_time,
+           ROW_NUMBER() OVER (ORDER BY reclaim_handling_time) AS row_num
+    FROM reclaims
+),
+Quartiles AS (
+    SELECT 
+        (SELECT reclaim_handling_time FROM OrderedReclaims WHERE row_num = FLOOR(0.25 * (total_count + 1))) AS Q1,
+        (SELECT reclaim_handling_time FROM OrderedReclaims WHERE row_num = FLOOR(0.50 * (total_count + 1))) AS Q2,
+        (SELECT reclaim_handling_time FROM OrderedReclaims WHERE row_num = FLOOR(0.75 * (total_count + 1))) AS Q3
+    FROM TotalCount
+)
+SELECT 
+    (SELECT COUNT(*) FROM reclaims WHERE reclaim_handling_time <= 15) AS reclaims_within_15_days,
+    Q1, Q2, Q3
+FROM Quartiles;
