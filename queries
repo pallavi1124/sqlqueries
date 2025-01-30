@@ -16,3 +16,19 @@ FROM EMPLOYEETABLE )
 SELECT EmployeeID, Name, Salary FROM EMPLOYEETABLE
 CROSS JOIN temporaryTable
 WHERE Employee.Salary > temporaryTable.averageValue;
+
+
+3. Example for a small nested Select query, where we need to show maximum quantity.
+Where TABLEA as A  which has 2 schemas id and name
+Where TABLEB as B  which has id and quanity
+Here we can see id is common on both the tables so we can join and can create another table which has id, name and quanity or we can use the Select statement to query this first
+
+
+SELECT A.id,A.name, B.quantity 
+FROM TABLEA A
+JOIN TABLEB B
+ON  A.id = B.id
+WHERE B.quantity > 
+(SELECT MAX(quantity) 
+FROM B);
+
