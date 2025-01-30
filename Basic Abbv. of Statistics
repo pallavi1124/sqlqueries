@@ -1,0 +1,11 @@
+N = Number of values/measurements
+N* = Number of missing values
+Mean/Average = Sum of recordcount/number of record counts, it also depicts the location of the data.
+Standard deviation  or SD = Calculate the mean of the data.
+                          Subtract the mean from each data point. 
+                          These differences are called deviations.Data points below the mean will have negative deviations,and data points above the mean will have positive deviations.
+                          Square each deviation to make it positive.
+                          Add the squared deviations together.
+                          Divide the sum by the number of data points in the population. The result is called the variance.
+                          Take the square root of the variance to get the standard deviation.It also depicts dispersion of the data, the low amount of SD means it is closer to mean, the more higher value the more scattered from mean.
+
