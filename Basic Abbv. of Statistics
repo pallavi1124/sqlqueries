@@ -1,3 +1,5 @@
+ Descriptive Statistics:
+
 N = Number of values/measurements
 N* = Number of missing values
 Mean/Average = Sum of recordcount/number of record counts, it also depicts the location of the data.
@@ -8,4 +10,11 @@ Standard deviation  or SD = Calculate the mean of the data.
                           Add the squared deviations together.
                           Divide the sum by the number of data points in the population. The result is called the variance.
                           Take the square root of the variance to get the standard deviation.It also depicts dispersion of the data, the low amount of SD means it is closer to mean, the more higher value the more scattered from mean.
-
+Minimum = Lowest value measured
+Maximum = Highhest value measured
+Median = Middle value location
+Q1 = 25% value of the data
+Q2 = 50% Value of the data
+Q3 = 75% Value of the data
+Q4 = 100% Value of the data
+Interquartile Range (IQR) = Range between Q3 to Q2
