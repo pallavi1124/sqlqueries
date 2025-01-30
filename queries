@@ -32,3 +32,9 @@ WHERE B.quantity >
 (SELECT MAX(quantity) 
 FROM B);
 
+4. Example to see which person handles most data
+
+SELECT person_id, person_name, SUM(data_handled) AS total_data
+FROM trans
+GROUP BY person_id, person_name
+ORDER BY total_data DESC
