@@ -1,7 +1,7 @@
 # sqlqueries
 
 
-Requirement : Find 100 employee details for sampling from 5000 records of employee.
+1.Requirement : Find 100 employee details for sampling from 5000 records of employee.
 We will use WITH clause and RAND() for the same , and also use ROW_NUMBER()
 
 Explanation : WITH clause essentially makes it easier to write complex queries by breaking them down into manageable subqueries.  
@@ -16,7 +16,7 @@ SELECT *
 FROM Emprow
 WHERE row_num <= 100;
 
-Requirement : Find all employees, ID, Name, and Salary whose salary is higher than the average salary of all employees in the from EMPLOYEETABLE
+2.Requirement : Find all employees, ID, Name, and Salary whose salary is higher than the average salary of all employees in the from EMPLOYEETABLE
 We will use AVG () along with WITH Clause, We will also create a temp table to store the value of Avg Salary and then join from main table 
 
 
