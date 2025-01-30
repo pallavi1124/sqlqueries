@@ -1,4 +1,6 @@
 # sqlqueries
+
+
 Requirement : Find 100 employee details for sampling from 5000 records of employee.
 We will use WITH clause and RAND() for the same , and also use ROW_NUMBER()
 
