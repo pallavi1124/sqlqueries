@@ -18,3 +18,6 @@ Q2 = 50% Value of the data
 Q3 = 75% Value of the data
 Q4 = 100% Value of the data
 Interquartile Range (IQR) = Range between Q3 to Q2
+
+
+ESTIMATION IS TO GENERALIZE FROM SAMPLE DISTRIBUTION TO POPULATION DISTRIBUTION
